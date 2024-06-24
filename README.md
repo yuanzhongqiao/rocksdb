@@ -1,29 +1,11 @@
-## RocksDB: A Persistent Key-Value Store for Flash and RAM Storage
-
-[![CircleCI Status](https://circleci.com/gh/facebook/rocksdb.svg?style=svg)](https://circleci.com/gh/facebook/rocksdb)
-
-RocksDB is developed and maintained by Facebook Database Engineering Team.
-It is built on earlier work on [LevelDB](https://github.com/google/leveldb) by Sanjay Ghemawat (sanjay@google.com)
-and Jeff Dean (jeff@google.com)
-
-This code is a library that forms the core building block for a fast
-key-value server, especially suited for storing data on flash drives.
-It has a Log-Structured-Merge-Database (LSM) design with flexible tradeoffs
-between Write-Amplification-Factor (WAF), Read-Amplification-Factor (RAF)
-and Space-Amplification-Factor (SAF). It has multi-threaded compactions,
-making it especially suitable for storing multiple terabytes of data in a
-single database.
-
-Start with example usage here: https://github.com/facebook/rocksdb/tree/main/examples
-
-See the [github wiki](https://github.com/facebook/rocksdb/wiki) for more explanation.
-
-The public interface is in `include/`.  Callers should not include or
-rely on the details of any other header files in this package.  Those
-internal APIs may be changed without warning.
-
-Questions and discussions are welcome on the [RocksDB Developers Public](https://www.facebook.com/groups/rocksdb.dev/) Facebook group and [email list](https://groups.google.com/g/rocksdb) on Google Groups.
-
-## License
-
-RocksDB is dual-licensed under both the GPLv2 (found in the COPYING file in the root directory) and Apache 2.0 License (found in the LICENSE.Apache file in the root directory).  You may select, at your option, one of the above-listed licenses.
+<div class="Box-sc-g0xbh4-0 bJMeLZ js-snippet-clipboard-copy-unpositioned" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text"><div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">RocksDB：用于闪存和 RAM 存储的持久键值存储</font></font></h2><a id="user-content-rocksdb-a-persistent-key-value-store-for-flash-and-ram-storage" class="anchor" aria-label="永久链接：RocksDB：用于闪存和 RAM 存储的持久键值存储" href="#rocksdb-a-persistent-key-value-store-for-flash-and-ram-storage"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><a href="https://circleci.com/gh/facebook/rocksdb" rel="nofollow"><img src="https://camo.githubusercontent.com/fa029f27462e1f7a3f44bdbb3481cb15505e4ea7e03f44bd0445dc6dfa0a815f/68747470733a2f2f636972636c6563692e636f6d2f67682f66616365626f6f6b2f726f636b7364622e7376673f7374796c653d737667" alt="CircleCI 状态" data-canonical-src="https://circleci.com/gh/facebook/rocksdb.svg?style=svg" style="max-width: 100%;"></a></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">RocksDB 由 Facebook 数据库工程团队开发和维护。它</font><font style="vertical-align: inherit;">基于 Sanjay Ghemawat ( </font><a href="mailto:sanjay@google.com"><font style="vertical-align: inherit;">sanjay@google.com</font></a><font style="vertical-align: inherit;"> ) 和 Jeff Dean ( </font><a href="mailto:jeff@google.com"><font style="vertical-align: inherit;">jeff@google.com</font></a><font style="vertical-align: inherit;"> )早期在</font></font><a href="https://github.com/google/leveldb"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LevelDB上的工作。</font></font></a><font style="vertical-align: inherit;"></font><a href="mailto:sanjay@google.com"><font style="vertical-align: inherit;"></font></a><font style="vertical-align: inherit;"></font><a href="mailto:jeff@google.com"><font style="vertical-align: inherit;"></font></a><font style="vertical-align: inherit;"></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">此代码是一个库，构成快速键值服务器的核心构建块，特别适合在闪存驱动器上存储数据。它采用日志结构化合并数据库 (LSM) 设计，在写入放大因子 (WAF)、读取放大因子 (RAF) 和空间放大因子 (SAF) 之间进行灵活权衡。它具有多线程压缩功能，特别适合在单个数据库中存储数 TB 的数据。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">从这里开始示例用法：</font></font><a href="https://github.com/facebook/rocksdb/tree/main/examples"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">https://github.com/facebook/rocksdb/tree/main/examples</font></font></a></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">请参阅</font></font><a href="https://github.com/facebook/rocksdb/wiki"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">github wiki</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">了解更多解释。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">公共接口位于 中</font></font><code>include/</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。调用者不应包含或依赖此包中任何其他头文件的详细信息。这些内部 API 可能会在未经警告的情况下更改。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">欢迎在</font></font><a href="https://www.facebook.com/groups/rocksdb.dev/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">RocksDB 开发者公共</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Facebook 群组和</font><font style="vertical-align: inherit;">Google 群组上的</font></font><a href="https://groups.google.com/g/rocksdb" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">电子邮件列表中提出问题并进行讨论。</font></font></a><font style="vertical-align: inherit;"></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">执照</font></font></h2><a id="user-content-license" class="anchor" aria-label="永久链接：许可证" href="#license"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">RocksDB 拥有 GPLv2（位于根目录中的 COPYING 文件）和 Apache 2.0 许可证（位于根目录中的 LICENSE.Apache 文件）的双重许可。您可以自行选择上述任一许可证。</font></font></p>
+</article></div>
